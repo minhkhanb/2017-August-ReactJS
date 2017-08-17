@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import ReactDOM from 'react-dom';
 import NewNumber from './NewNumber';
 
 class DataList extends Component {
@@ -7,12 +8,15 @@ class DataList extends Component {
 
         this.state = {
             data:[],
-            num:0
+            num:0,
+            sData: 'Initial data...'
         }
 
         this.setStateHandler = this.setStateHandler.bind (this);
         this.setRandomNumber = this.setRandomNumber.bind (this);
         this.setNewNumber = this.setNewNumber.bind (this);
+        this.updateState = this.updateState.bind (this);
+        this.clearInput = this.clearInput.bind (this);
 
     }
 
@@ -32,6 +36,19 @@ class DataList extends Component {
         this.setState (this.state);
     }
 
+    updateState(e) {
+        this.state.sData = e.target.value;
+        this.setState(this.state);
+    }
+
+    clearInput(e) {
+        this.state.sData = '';
+        this.setState(this.state);
+        console.log(e.target.previousSibling);
+        //ReactDOM.findDOMNode(this.refs.input).focus();
+        ReactDOM.findDOMNode(e.target.previousSibling).focus();
+    }
+
     render() {
         return (
             <tr>
@@ -44,8 +61,7 @@ class DataList extends Component {
                     <button onClick={this.setRandomNumber}>Rand</button>
                     <h4>State Array: {this.state.data}</h4>
                     <span>{Math.floor (Math.random () * 10)}</span>
-                    <NewNumber num={this.state.num}/>
-
+                    <NewNumber refData="input" num={this.state.sData} updateStateProp={this.updateState} clearStateProp={this.clearInput}/>
                 </td>
             </tr>
         );

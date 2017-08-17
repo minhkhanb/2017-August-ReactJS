@@ -29,9 +29,13 @@ class NewNumber extends Component {
         console.log('Component WILL UNMOUNT!');
     }
 
+
+
     render() {
         return(
             <p>
+                <input ref={this.props.refData} type="text" value={this.props.num} onChange={this.props.updateStateProp}/>
+                <button onClick={this.props.clearStateProp}>Clear</button>
                 <strong>{this.props.num}</strong>
             </p>
         );

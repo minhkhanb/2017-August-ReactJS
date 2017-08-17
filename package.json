@@ -24,7 +24,12 @@
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-router": "^3.0.0",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.5",
+    "style-loader": "^0.18.2"
   }
 }
