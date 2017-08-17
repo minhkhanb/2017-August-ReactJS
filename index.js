@@ -6,3 +6,8 @@ ReactDOM.render (
     <App/>,
     document.querySelector ('#app')
 );
+
+/*
+setTimeout(()=>{
+   ReactDOM.unmountComponentAtNode(document.querySelector('#app'))
+},10000);*/

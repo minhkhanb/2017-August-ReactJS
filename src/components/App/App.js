@@ -45,6 +45,7 @@ class App extends Component {
                             <th>Id</th>
                             <th>Name</th>
                             <th>Number</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
