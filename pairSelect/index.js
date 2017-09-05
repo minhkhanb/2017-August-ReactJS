@@ -30,12 +30,43 @@ class GameInfo extends Component {
     }
 }
 
+class GameCards extends Component {
+    render() {
+        return(
+            <li className="flip-container">
+                <div className="flipper">
+                    <div className="front">
+
+                    </div>
+                    <div className="back">
+                        <img src="http://randomimage.setgetgo.com/get.php?key=8693&amp;height=176&amp;width=176" />
+                    </div>
+                </div>
+            </li>
+        );
+    }
+}
+
 class Game extends React.Component {
     render() {
         return (
             <div className="site">
                 <div className="container">
                     <GameInfo/>
+                    <ul>
+                        <GameCards/>
+                        <GameCards/>
+                        <GameCards/>
+                        <GameCards/>
+                        <GameCards/>
+                        <GameCards/>
+                        <GameCards/>
+                        <GameCards/>
+                        <GameCards/>
+                        <GameCards/>
+                        <GameCards/>
+                        <GameCards/>
+                    </ul>
                 </div>
             </div>
         );
