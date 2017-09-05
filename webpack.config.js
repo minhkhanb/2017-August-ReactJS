@@ -1,9 +1,9 @@
 var config = {
-    entry:'./caro/index.js',
+    entry:'./pairSelect/index.js',
 
     output:{
         path:'/',
-        filename:'caro/index.js'
+        filename:'pairSelect/index.js'
     },
 
     devServer:{
